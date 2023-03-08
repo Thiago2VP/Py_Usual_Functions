@@ -1,6 +1,3 @@
-total = int(input("Total "))
-organ = int(input("Organização "))
-
 def fatorial(num):
 	fat = 1
 	while(num > 1):
@@ -8,6 +5,7 @@ def fatorial(num):
 		num -= 1
 	return fat
 
-arranjo = fatorial(total) / fatorial(total - organ)
+def arranjo(total, organ):
+	return fatorial(total) / fatorial(total - organ)
 
-print("O arranjo é %d" %(arranjo))
+print("O fatorial é %d" %(fatorial(21)*fatorial(3)))
