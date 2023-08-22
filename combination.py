@@ -1,11 +1,13 @@
 def fat(num):
-	fat = 1
-	while(num > 1):
-		fat *= num
-		num -= 1
-	return fat
+	if (num == 1):
+		return 1
+	else:
+		return num * fat(num - 1)
 
 def arj(total, organ):
 	return fat(total) / fat(total - organ)
 
-print("O fatorial é %d" %(fat(21)*fat(3)))
+# print("O fatorial é %d" %(fat(21)*fat(3)))
+
+num = int(input())
+print("O Fatorial é %d" % (fat(num)))
